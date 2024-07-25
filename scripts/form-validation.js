@@ -20,13 +20,13 @@ document.querySelector("form").addEventListener("submit", (e) => {
   });
 
   // Do not continue with generating results if form is invalid 
-  if (!isValid) {
-    e.preventDefault();
-    alert("Please answer all of the questions before submitting");
-  } else {
+  // if (!isValid) {
+  //   e.preventDefault();
+  //   alert("Please answer all of the questions before submitting");
+  // } else {
     e.preventDefault();
     let bestCategory = processAnswers(answers);
     console.log(bestCategory);
     generateResult(bestCategory);
-  }
+  // }
 });

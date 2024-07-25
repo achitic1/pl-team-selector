@@ -104,11 +104,65 @@ input[type="radio"] {
 }
 
 /* Styling the results */
-.result-info {
+/* .result-info {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  justify-content: center;
   background-color: black;
+  margin: 0;
+  height: 100vh;
   padding: 2em;
   border: solid darkgray .2em;
   border-radius: .75em;
+} */
+
+#results {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: center;
+}
+
+#results h1 {
+  border-radius: .75em;
+}
+
+.team-card {
+  background-color: black;
+  border: 1px solid;
+  padding: 20px;
+  margin: 10px;
+  border-radius: .75em;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  width: calc(.8 * 100vw);
+  height: calc(.75 * 100vh);
+}
+
+.team-card h2 {
+  margin: 0;
+  font-size: 2em;
+  color: white;
+  padding: 1em .1em 1em 1em;
+  text-align: left;
+}
+
+.team-card p {
+  font-size: 1.2em;
+  color: white;
+  text-align: left;
+  padding-left: 2em;
+}
+
+#results.hidden {
+  display: none;
+}
+
+.hidden {
+  display: none;
 }
 
 /* Media Queries for different device width */
