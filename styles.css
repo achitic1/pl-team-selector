@@ -5,27 +5,34 @@
   font-style: normal;
 }
 
-/* Styles */
+/* Styles for computers*/
 html {
   font-size: 16px;
   font-family: "Graduate";
+  box-sizing: border-box; /* Added for box-sizing */
+}
+
+*, *::before, *::after {
+  box-sizing: inherit; /* Ensures padding and border are included in width and height */
 }
 
 body {
-  letter-spacing: .2em;
+  letter-spacing: .1em;
   background: rgb(63,94,251);
   background: radial-gradient(circle, rgba(63,94,251,1) 0%, rgba(70,190,252,1) 100%);
   text-align: center;
   color: white;
   margin: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
 }
 
 #pllogo {
-  height: 500px;
   width: 500px;
+  height: 500px;
+  height: auto;
   border: solid darkgray .5em;
   border-radius: 1em;
-  margin: 2.5em;
+  margin: 2.5em auto; /* Centered and prevent overflow */
 }
 
 header {
@@ -37,29 +44,32 @@ h1 {
   font-family: "Graduate";
   background-color: black;
   padding: 1em;
-  margin-left: -10px;
-  margin-right: -10px;
-  margin-top: 0;
+  margin: 0 auto; /* Centered and prevent overflow */
+  max-width: 100%;
+  box-sizing: border-box; /* Include padding and border in width */
 }
-
 
 /* Styling for the form ie. Quiz Questions */
 form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
 }
 
 fieldset {
   margin-top: 2em;
   margin-bottom: 2em;
   height: 15.625em;
-  width: 25em;
+  width: 100%;
+  max-width: 25em;
   text-align: left;
   border: none;
+  box-sizing: border-box; /* Include padding and border in width */
 }
 
-/* Styling to make the question stand out */
+/* Styling to make the questions stand out */
 fieldset h2,
 button {
   background-color: rgb(0, 0, 0);
@@ -91,4 +101,80 @@ label {
 
 input[type="radio"] {
   margin-right: 10px;
+}
+
+/* Styling the results */
+.result-info {
+  background-color: black;
+  padding: 2em;
+  border: solid darkgray .2em;
+  border-radius: .75em;
+}
+
+/* Media Queries for different device width */
+
+/* Mobile */
+@media (max-width: 600px) {
+  body {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  #pllogo {
+    width: 100%;
+    height: auto;
+    border: none;
+    border-radius: 0;
+  }
+
+  fieldset h2 {
+    border: none;
+    border-radius: 0;
+    width: 100%;
+  }
+
+  fieldset {
+    width: 100%;
+  }
+
+  button {
+    margin-top: 3em;
+    display: flexbox;
+  }
+}
+
+/* Tablets */
+@media (min-width: 601px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  #pllogo {
+    width: 80%;
+    height: auto;
+  }
+
+  fieldset {
+    width: 80%;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1025px) {
+  h1 {
+    font-size: 2.5em;
+  }
+
+  #pllogo {
+    width: 500px;
+    height: 500px;
+  }
+
+  fieldset {
+    width: 25em;
+  }
 }
