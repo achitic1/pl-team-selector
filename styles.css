@@ -30,7 +30,7 @@ body {
   width: 500px;
   height: 500px;
   height: auto;
-  border: solid darkgray .5em;
+  border: solid darkgray .2em;
   border-radius: 1em;
   margin: 2.5em auto; /* Centered and prevent overflow */
 }
@@ -74,7 +74,7 @@ fieldset h2,
 button {
   background-color: rgb(0, 0, 0);
   padding: .5em;
-  border: solid darkgray .2em;
+  border: solid darkgray 2px;
   border-radius: .75em;
   color: white;
 }
@@ -104,19 +104,6 @@ input[type="radio"] {
 }
 
 /* Styling the results */
-/* .result-info {
-  display: flex;
-  flex-direction: row;
-  align-content: center;
-  justify-content: center;
-  background-color: black;
-  margin: 0;
-  height: 100vh;
-  padding: 2em;
-  border: solid darkgray .2em;
-  border-radius: .75em;
-} */
-
 #results {
   display: flex;
   flex-direction: column;
@@ -129,9 +116,13 @@ input[type="radio"] {
 
 #results h1 {
   border-radius: .75em;
+  border: 1px, solid;
 }
 
 .team-card {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
   background-color: black;
   border: 1px solid;
   padding: 20px;
@@ -155,6 +146,23 @@ input[type="radio"] {
   color: white;
   text-align: left;
   padding-left: 2em;
+}
+
+.content-container {
+  flex: 1; /* Allow the content to take up available space */
+}
+
+.image-container {
+  flex: 1;  
+  max-width: calc(.4 * 100vw);
+  max-height: calc(.4 * 100vh);
+  margin: 75px;
+}
+
+.team-image {
+  width: 100%;
+  height: auto;
+  border: 1px solid;
 }
 
 #results.hidden {
