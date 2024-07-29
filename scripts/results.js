@@ -12,7 +12,7 @@ class Team {
 
 const teams = [ new Team("Man City", 35, "skyblue", 1880, "Manchester, England", "Etihad Stadium", "man-city.jpg"),
                 new Team("Man United", 68, "red", 1878, "Manchester, England", "Old Trafford", "man-united.jpg"),
-                new Team("Chelsea", 34, "blue", 1905, "London, England", "Stamford Bridge", "chelse,jpg"),
+                new Team("Chelsea", 34, "blue", 1905, "London, England", "Stamford Bridge", "chelsea.jpg"),
                 new Team("Liverpool", 69, "red", 1892, "Liverpool, England", "Anfield", "liverpool.jpg"),
                 new Team("Aston Villa", 25, "maroon", 1874, "Birmingham, England", "Villa Park", "aston-villa.jpg")
             ];
@@ -40,28 +40,28 @@ function generateResult(bestCategory) {
     results.classList.remove("hidden");
     
     // Creating the heading with the name 
-    let title = document.createElement("h1");
+    const title = document.createElement("h1");
     title.textContent = "You should support:";
     results.appendChild(title);
 
     // Create the team card 
-    let teamCard = document.createElement("div");
+    const teamCard = document.createElement("div");
     teamCard.classList.add("team-card");
 
     // Containers to separate data and image
-    let statContainer = document.createElement("div");
-    let imageContainer = document.createElement("div");
+    const statContainer = document.createElement("div");
+    const imageContainer = document.createElement("div");
     statContainer.classList.add("stats-container");
     imageContainer.classList.add("image-container");
 
     for (const [key, value] of Object.entries(matchedTeam)) {
         if (key !== "image") {
-            let data = document.createElement("h2");
+            const data = document.createElement("h2");
 
-            let keySpan = document.createElement("span");
+            const keySpan = document.createElement("span");
             keySpan.textContent = key + ": ";
             
-            let valueSpan = document.createElement("span");
+            const valueSpan = document.createElement("span");
             valueSpan.textContent = value;
             valueSpan.style.color = matchedTeam.colors;
 
@@ -70,7 +70,7 @@ function generateResult(bestCategory) {
             statContainer.appendChild(data);
         } else {
             // Create and add the image
-            let image = document.createElement("img");
+            const image = document.createElement("img");
             image.src = "team-photos/" + value; // Set the path
             image.alt = matchedTeam.name + " stadium";
             image.classList.add("team-image");
@@ -84,7 +84,7 @@ function generateResult(bestCategory) {
     results.appendChild(teamCard);
 
     // Create a button to restart the quiz
-    let restart = document.createElement("button");
+    const restart = document.createElement("button");
     restart.setAttribute("type", "button");
     restart.textContent = "Restart";
     restart.addEventListener("click", () => {

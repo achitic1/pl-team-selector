@@ -49,6 +49,10 @@ h1 {
   box-sizing: border-box; /* Include padding and border in width */
 }
 
+#start {
+
+}
+
 /* Styling for the form ie. Quiz Questions */
 form {
   display: flex;
@@ -80,9 +84,10 @@ button {
 }
 
 button {
+  margin: .75em;
   height: 2.5em;
   width: 5.5em;
-  font-size: 1em;
+  font-size: 2em;
   font-family: "Graduate";
 }
 
@@ -154,14 +159,15 @@ input[type="radio"] {
 
 .image-container {
   flex: 1;  
-  max-width: calc(.4 * 100vw);
-  max-height: calc(.4 * 100vh);
+  width: calc(.4 * 100vw);
+  height: calc(.4 * 100vh);
   margin: 75px;
+  position: relative;
 }
 
 .team-image {
   width: 100%;
-  height: auto;
+  height: calc(.5 * 100vh);
   border: 1px solid;
 }
 

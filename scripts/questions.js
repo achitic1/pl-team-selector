@@ -3,16 +3,16 @@
   function createQuestions() {
     const questionsList = document.querySelector("form");
     const questions = [
-      "You're action oriented", 
-      "You are tidy and clean", 
-      "You cheer for an underdog",
-      "You appreciate history", 
-      "You crave success", 
-      "You feel like you exceed expectations",
-      "You like a good story", 
-      "You don't like change", 
-      "You're business oriented",
-      "You consider yourself an artist"
+      "Are you action oriented?", 
+      "Are you tidy and clean?", 
+      "Do you cheer for an underdog?",
+      "Do you appreciate history?", 
+      "Do you crave success?", 
+      "Do you feel like you exceed expectations?",
+      "Do you like a good story?", 
+      "Do you not like change?", 
+      "Do you consider yourself business oriented?",
+      "Do you consider yourself an artist?"
     ];
 
     const answerChoices = new Map([
@@ -44,12 +44,15 @@
         newQuestion.appendChild(document.createElement("br"));
       }
 
+      newQuestion.classList.add("hidden");
       questionsList.appendChild(newQuestion);
     }
 
+    // Creating and hiding the submit button
     let submitButton = document.createElement("button");
     submitButton.type = "submit";
     submitButton.textContent = "Submit";
+    submitButton.classList.add("hidden");
     questionsList.appendChild(submitButton);
   }
 
