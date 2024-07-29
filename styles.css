@@ -49,10 +49,6 @@ h1 {
   box-sizing: border-box; /* Include padding and border in width */
 }
 
-#start {
-
-}
-
 /* Styling for the form ie. Quiz Questions */
 form {
   display: flex;
@@ -104,8 +100,12 @@ label {
   font-weight: 700;
 }
 
-input[type="radio"] {
+input[type="radio"] { 
   margin-right: 10px;
+}
+
+input[type="radio"]:hover {
+  cursor: pointer;
 }
 
 /* Styling the results */
