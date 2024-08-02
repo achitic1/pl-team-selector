@@ -5,4 +5,4 @@
  
 3. This is a web based project so there is no need for installation. Here is the link to the quiz. https://wonderful-figolla-fed6fe.netlify.app/
 
-4. In the future I would like to utilize a prmeier league database for a larger dataset since my current dataset is small and static. I also would like to improve the matching algorithm to utilize this data set and provide more interesting results. I think I could do this with a cosine similarity algorithm potentially as my current algorithm is just based of pre-assigned weights. 
+4. In the future I would like to utilize a premier league database for a larger dataset since my current dataset is small and static. I also would like to improve the matching algorithm to utilize this data set and provide more interesting results. I think I could do this with a cosine similarity algorithm potentially as my current algorithm is just based of pre-assigned weights. 
